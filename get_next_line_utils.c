@@ -6,13 +6,11 @@
 /*   By: nradin <nradin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 14:17:14 by nradin            #+#    #+#             */
-/*   Updated: 2023/01/06 14:24:04 by nradin           ###   ########.fr       */
+/*   Updated: 2023/01/23 20:34:50 by nradin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <stdio.h>
-#include <fcntl.h>
 
 size_t	ft_strlen(const char *s)
 {

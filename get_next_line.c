@@ -6,13 +6,11 @@
 /*   By: nradin <nradin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 12:44:50 by nradin            #+#    #+#             */
-/*   Updated: 2023/01/19 19:41:56 by nradin           ###   ########.fr       */
+/*   Updated: 2023/01/23 20:37:20 by nradin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <stdio.h>
-#include <fcntl.h>
 
 char	*ft_strjoin_free(char *s1, char *s2)
 {
@@ -36,7 +34,7 @@ char	*ft_trim_start(char *str)
 	i = 0;
 	while (str[i] && str[i] != '\n')
 		i++;
-	if (!str[i])
+	if (!str[i] || !str[i + 1])
 	{
 		free(str);
 		return (NULL);
@@ -63,7 +61,7 @@ char	*read_from_file(int fd, char *res)
 	int		byte_read;
 	char	*buf;
 
-	buf = malloc(BUFFER_SIZE + 1);
+	buf = (char *)malloc(BUFFER_SIZE + 1);
 	byte_read = read(fd, buf, BUFFER_SIZE);
 	while (byte_read != 0)
 	{

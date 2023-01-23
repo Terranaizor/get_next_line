@@ -6,7 +6,7 @@
 /*   By: nradin <nradin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 12:56:35 by nradin            #+#    #+#             */
-/*   Updated: 2023/01/04 11:23:21 by nradin           ###   ########.fr       */
+/*   Updated: 2023/01/08 19:38:23 by nradin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@
 # include <stdlib.h>
 # include <sys/types.h>
 # include <sys/uio.h>
+
+# ifndef BUFFER_SIZE
+
+#  define BUFFER_SIZE 42
+# endif
 
 char	*get_next_line(int fd);
 size_t	ft_strlen(const char *s);
